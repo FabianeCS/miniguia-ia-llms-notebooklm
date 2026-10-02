@@ -1,0 +1,293 @@
+Pergunta 1. Com base exclusivamente nas fontes deste notebook, explique o que é Inteligência Artificial Generativa. Considere que sou iniciante em tecnologia. Utilize linguagem simples e dê três exemplos práticos.
+
+Resposta: A **Inteligência Artificial Generativa (IA Generativa)** é um tipo de tecnologia focada na **criação de novos conteúdos** a partir do aprendizado com grandes quantidades de dados. 
+
+Enquanto os modelos tradicionais de IA costumam focar em analisar dados já existentes, a IA generativa se diferencia por ter a capacidade de **gerar novos materiais** (como textos, imagens ou áudios), servindo como uma ferramenta para **aumentar a criatividade** humana. Ela funciona por meio de modelos treinados — como os *Large Language Models* (LLMs) — que conseguem entender o contexto e prever qual deve ser o próximo elemento produzido.
+
+---
+
+### **Três exemplos práticos de uso da IA Generativa:**
+
+1. **Assistente de criação de conteúdo e texto:** Ferramentas como o **Microsoft Copilot** atuam como um "companheiro" na escrita, ajudando a redigir documentos, criar rascunhos, resumir textos longos ou responder a perguntas em um formato de conversa.
+2. **Transformação de texto em imagem:** A tecnologia de IA generativa permite **visualizar ideias** ao transformar uma descrição em texto escrita pelo usuário em uma imagem novíssima produzida pelo sistema.
+3. **Apoio no aprendizado e na educação:** A IA generativa está revolucionando a **área educacional** ao atuar na explicação de conteúdos, na solução de problemas passo a passo (como em matemática, lógica ou programação) e na criação de experiências interativas de estudo.
+
+Pergunta 2. Com base nas fontes, explique o que é um Large Language Model (LLM). Explique primeiro de forma simples e depois apresente uma explicação um pouco mais técnica.
+
+Resposta: ### **Explicação Simples**
+
+Um **Large Language Model (LLM)** — ou Grande Modelo de Linguagem — é um tipo de inteligência artificial treinado com uma quantidade gigantesca de dados de texto.
+
+De forma bastante simples, a função principal de um LLM é **prever qual é a próxima palavra (ou pedaço de texto) em uma sequência**. Pense nele como um sistema de "completar a frase" extremamente avançado: com base em tudo o que foi escrito antes, o modelo calcula o que faz mais sentido vir a seguir. 
+
+Através dessa tarefa repetitiva de previsão e de ajustes adicionais, o LLM aprende a estrutura do idioma, adquire conhecimento geral sobre o mundo e torna-se capaz de manter conversas, responder a dúvidas, resumir textos e agir como um assistente virtual.
+
+---
+
+### **Explicação Técnica**
+
+Sob uma perspectiva técnica e orientada a desenvolvimento, o funcionamento de um LLM envolve os seguintes pilares:
+
+* **Arquitetura e Pesos do Modelo:** Um LLM é composto fundamentalmente por dois elementos:
+  1. **Código de Arquitetura:** A estrutura de rede neural, tipicamente baseada na arquitetura **Transformer**.
+  2. **Pesos do Modelo (*Model Weights*):** Bilhões de parâmetros numéricos aprendidos durante o treinamento que codificam o conhecimento do sistema.
+* **Funcionamento Baseado em Tokens:** Os LLMs não processam texto bruto caractere por caractere; eles operam com **tokens** (unidades de subpalavras, palavras inteiras ou pontuações). Um *tokenizer* converte o texto de entrada em números (IDs dos tokens), e o modelo realiza seus cálculos inteiramente sobre esses IDs numéricos antes de codificá-los de volta em texto.
+* **Geração Autoregressiva e Janela de Contexto:** A geração de saída é **autoregressiva** (produz um token de cada vez, onde cada novo token é adicionado ao histórico para gerar o próximo). A quantidade de informação que o modelo consegue processar por chamada (prompt, histórico e resposta) é limitada por sua **janela de contexto** (*context window*).
+* **Estágios de Treinamento:**
+  1. **Pré-treinamento:** O modelo aprende a estrutura da linguagem ao prever o próximo token em volumes massivos de texto.
+  2. **Pós-treinamento (SFT e RLHF):** Inclui o *Supervised Fine-Tuning* (SFT) com rascunhos de diálogos ideais para ensinar o modelo a seguir instruções e atuar como assistente. Em seguida, utiliza-se o *Reinforcement Learning from Human Feedback* (RLHF), onde classificações humanas treinam um modelo de recompensa para ajustar as respostas com base em preferências de qualidade.
+  3. **Raciocínio via Aprendizado por Reforço:** Modelos focados em raciocínio aprendem a gerar uma "cadeia de pensamento" (*chain of thought*) — dividindo problemas em etapas antes de responder —, o que melhora o desempenho em matemática, lógica e programação.
+* **Controle de Determinismo (Temperatura):** A variabilidade das saídas é regulada por parâmetros como a **temperatura**. Uma temperatura igual a 0 torna o modelo mais determinístico (escolhendo os tokens mais prováveis), enquanto temperaturas maiores (ex: 0,7 a 1,0) aumentam a aleatoriedade e a criatividade.
+
+Pergunta 3
+
+Qual é a relação entre Inteligência Artificial, Machine Learning, Deep Learning, IA Generativa e LLMs? Organize a resposta de forma hierárquica para facilitar meu estudo.
+
+Resposta: A relação entre esses conceitos funciona como uma estrutura de **conjuntos aninhados** (semelhante a caixas ou bonecas russas Matrioshka), onde cada termo representa uma especialização do conceito anterior.
+
+---
+
+### **Estrutura Hierárquica (do mais amplo ao mais específico)**
+
+1. **Inteligência Artificial (IA)** *(O conceito guarda-chuva)*
+   * É a área ampla da ciência da computação dedicada ao desenvolvimento de tecnologias capazes de simular a inteligência e o comportamento humano em diversas tarefas.
+
+2. **Machine Learning / Aprendizado de Máquina (ML)** *(Subcampo da IA)*
+   * É uma subárea da IA na qual os sistemas aprendem a identificar padrões e a realizar previsões a partir da análise de conjuntos de dados. *(Nota: A definição formal do Machine Learning como subconjunto geral da IA provém do conhecimento técnico de mercado, complementar às fontes).*
+
+3. **Deep Learning / Aprendizado Profundo (DL)** *(Subcampo do Machine Learning)*
+   * É uma subárea do Machine Learning baseada em **redes neurais profundas** (como a arquitetura *Transformer*). Essas redes processam dados por meio de **bilhões de parâmetros numéricos (pesos)** ajustados durante o treinamento em grandes volumes de informação.
+
+4. **IA Generativa** *(Aplicação / Categoria focada em criação)*
+   * É um ramo da IA (alimentado por modelos de *Deep Learning*) focado na **criação de conteúdos inéditos e originais** — como textos, imagens, áudios e códigos —, diferenciando-se dos modelos tradicionais que apenas analisam ou classificam dados existentes.
+
+5. **Large Language Models (LLMs)** *(Tipo especializado de IA Generativa)*
+   * É uma categoria específica dentro da IA Generativa e do *Deep Learning* voltada exclusivamente para a **linguagem humana**. O LLM utiliza redes neurais para entender e gerar textos ao prever estatisticamente o próximo *token* (palavra ou pedaço de palavra) de uma sequência.
+
+---
+
+### **Resumo da Relação para Estudo:**
+* **IA:** O campo geral da inteligência em máquinas.
+* **Machine Learning:** A técnica de ensinar máquinas a aprender com dados.
+* **Deep Learning:** O aprendizado baseado em redes neurais profundas.
+* **IA Generativa:** O uso de redes profundas para **gerar conteúdos novos**.
+* **LLM:** A IA Generativa **especializada em texto e linguagem**.
+
+Pergunta 4
+
+O que são tokens em um modelo de linguagem? Explique para um iniciante e dê exemplos práticos de como uma frase pode ser dividida em tokens.
+
+Resposta: Para um iniciante, a forma mais fácil de entender os **tokens** é imaginá-los como os **blocos de construção básicos** que a inteligência artificial utiliza para ler e escrever textos. 
+
+Os modelos de linguagem não leem palavras inteiras de uma só vez nem processam o texto caractere por caractere. Em vez disso, uma ferramenta chamada *tokenizer* divide o texto de entrada em pedaços menores chamados **tokens**. 
+
+Um token pode ser uma palavra inteira, parte de uma palavra (subpalavra), um único caractere ou um sinal de pontuação.
+
+---
+
+### **Como a IA processa os Tokens?**
+
+A inteligência artificial não entende letras ou palavras diretamente; ela funciona com matemática. Por isso, **cada token corresponde a um número exclusivo (um ID)** no vocabulário do modelo. 
+
+1. Você digita o texto.
+2. O *tokenizer* divide o texto em **tokens**.
+3. Os tokens são convertidos em seus **IDs numéricos** correspondentes.
+4. O modelo realiza todos os cálculos e previsões trabalhando **exclusivamente com esses números**.
+5. Ao responder, o modelo gera novos números de tokens, que são decodificados de volta em texto legível para você.
+
+---
+
+### **Exemplos Práticos de Divisão em Tokens**
+
+* **Exemplo 1: Quebra de frase e pontuação**
+  A frase em inglês *"Tokenization is fascinating!"* é dividida pelo *tokenizer* da seguinte forma:
+  ```text
+  ["Token", "ization", " is", " fascinating", "!"]
+  ```
+  * **O que observar:** A palavra longa "Tokenization" foi dividida em dois pedaços (`"Token"` + `"ization"`). O sinal de exclamação (`"!"`) virou um token próprio. Além disso, os espaços antes de algumas palavras também são incorporados ao token.
+  * **No sistema numérico da IA:** Essa sequência de 5 tokens é traduzida internamente em uma lista de números como ``.
+
+* **Exemplo 2: Palavras inteiras vs. Subpalavras**
+  * Uma palavra comum e simples como `"hello"` pode formar **um único token**.
+  * Já uma palavra mais complexa como *"unbelievable"* pode ser quebrada em **três tokens menores**: `"un"` + `"believ"` + `"able"`.
+
+---
+
+### **Por que é importante entender o que são Tokens?**
+
+* **Medição de Memória (Janela de Contexto):** O limite de texto que o modelo consegue processar em uma única conversa é medido em tokens, e não em palavras ou páginas.
+* **Custos:** O uso e a cobrança das APIs de IA costumam ser calculados por quantidade de tokens (tokens enviados + tokens gerados na resposta).
+* **Regra prática:** Em inglês, uma estimativa rápida é que **1 token equivale a aproximadamente ¾ de uma palavra**.
+
+Pergunta 5
+
+O que é uma janela de contexto? Explique sua função, sua relação com tokens e por que ela é importante para os modelos de linguagem.
+
+Resposta: A **janela de contexto** (*context window*) é o limite máximo de informação que um modelo de linguagem consegue manipular em uma única chamada. Ela funciona como o **orçamento de memória de trabalho** do modelo, definindo o volume de dados que o sistema consegue "enxergar" e considerar no momento de gerar uma resposta.
+
+---
+
+### **Qual é a Função da Janela de Contexto?**
+
+A função principal da janela de contexto é abrigar **todos os dados necessários** para que o modelo processe a solicitação e produza uma saída coerente. Dentro desse limite, devem caber obrigatoriamente:
+
+* As **instruções de comportamento** do sistema (*system prompt*);
+* As **perguntas e mensagens enviadas pelo usuário**;
+* O **histórico de mensagens anteriores** para manter a continuidade da conversa;
+* Quaisquer **dados contextuais adicionais** inseridos;
+* Os **tokens da própria resposta** que o modelo está gerando.
+
+Como os modelos de linguagem operam de forma *stateless* (sem memória persistente entre chamadas de API distintas), a janela de contexto é o único mecanismo disponível para fornecer histórico e conhecimento temporário ao sistema.
+
+---
+
+### **Qual é a Relação da Janela de Contexto com os Tokens?**
+
+A janela de contexto e os tokens estão diretamente ligados porque **a capacidade da janela de contexto é medida exclusivamente em tokens**, e não em número de palavras, caracteres ou páginas. 
+
+* **O que são tokens:** Os modelos não processam texto bruto caractere por caractere, mas sim por meio de **tokens**, que são unidades de subpalavras, palavras inteiras ou sinais de pontuação (em inglês, 1 token equivale a aproximadamente ¾ de uma palavra).
+* **Orçamento compartilhado:** O limite da janela engloba a **soma dos tokens de entrada** (prompt e histórico) mais os **tokens de saída** (a resposta gerada). 
+* **Trade-off de espaço:** Quanto mais longo for o prompt ou o histórico inserido, mais tokens da janela serão consumidos, restando **menos espaço para a resposta do modelo**.
+
+---
+
+### **Por que a Janela de Contexto é Importante?**
+
+1. **Determina a Capacidade de Retenção:** Embora modelos modernos ofereçam janelas de contexto variando de 4 mil a mais de 1 milhão de tokens, o limite é sempre finito. Tudo o que ultrapassar esse orçamento precisa ser truncado ou descartado.
+2. **Permite Conversas Coerentes:** Como o LLM não se lembra de conversas passadas sozinho, é o envio do histórico dentro da janela de contexto que permite que ele atue como um assistente capaz de manter o fio da meada em um diálogo.
+3. **Impacta Custos:** O modelo de precificação das APIs de IA é cobrado por token (tanto de entrada quanto de saída), tornando o gerenciamento da janela de contexto um fator direto no custo das aplicações.
+4. **Afeta a Latência e o Desempenho:** Processar uma janela de contexto extensa exige mais poder computacional. A fase inicial de processamento de todos os tokens de entrada (chamada de *prefill*) leva mais tempo antes que o primeiro token de resposta comece a ser gerado.
+
+Pergunta 6
+
+Com base nas fontes, explique de maneira simplificada como um LLM aprende durante o treinamento.
+
+Resposta: De maneira simplificada, o aprendizado de um **Large Language Model (LLM)** ocorre em etapas estratégicas e progressivas, onde cada fase aprimora as capacidades do sistema.
+
+---
+
+### **1. Pré-treinamento (Aprender a prever a próxima palavra)**
+Nesta primeira fase, o modelo é exposto a uma quantidade gigantesca de textos para realizar uma tarefa aparentemente simples: **prever qual é o próximo token em uma sequência com base nos tokens anteriores**. Por meio desse objetivo básico de "completar o texto", o modelo aprende sozinho a estrutura da linguagem e acumula conhecimentos gerais sobre o mundo.
+
+---
+
+### **2. Pós-treinamento (Aprender a agir como assistente)**
+O modelo pré-treinado apenas sabe continuar textos; para se transformar em um assistente útil e seguro, ele passa pelo pós-treinamento em duas etapas principais:
+* **Ajuste Fino Supervisionado (SFT):** O modelo é treinado com exemplos de conversas ideais escritas por humanos. Essa fase ensina a IA a seguir instruções, responder a dúvidas de forma prestativa, recusar solicitações prejudiciais e formatar respostas adequadamente.
+* **Aprendizado por Reforço com Feedback Humano (RLHF):** Avaliadores humanos analisam e comparam pares de respostas geradas pelo modelo para indicar qual é a melhor. Esses dados de preferência treinam um "modelo de recompensa" que guia o LLM a produzir respostas no tom, clareza e qualidade preferidos pelas pessoas.
+
+---
+
+### **3. Raciocínio via Aprendizado por Reforço (Aprender a pensar por etapas)**
+Em modelos mais avançados, o aprendizado por reforço é utilizado para ensinar o sistema a **raciocinar passo a passo antes de responder**. O modelo aprende a gerar uma "cadeia de pensamento" (*chain of thought*), dividindo problemas em subetapas e checando seu próprio trabalho. Esse processo melhora significativamente o desempenho do LLM em tarefas como matemática, lógica e programação.
+
+---
+
+### **Resumo do Aprendizado:**
+* **Base (Pré-treinamento):** Aprende a linguagem e fatos gerais completando frases.
+* **Instrução (SFT + RLHF):** Aprende a obedecer comandos e a conversar como um assistente útil.
+* **Raciocínio (Aprendizado por Reforço):** Aprende a refletir e resolver problemas complexos passo a passo.
+
+Pergunta 7
+
+Qual é a diferença entre treinamento e inferência em um modelo de linguagem? Apresente exemplos para facilitar a compreensão.
+
+Resposta: A diferença entre **treinamento** e **inferência** reflete as duas grandes fases do ciclo de vida de um modelo de linguagem: a fase em que o modelo **aprende** e a fase em que ele é **utilizado**.
+
+---
+
+### **1. O que é o Treinamento?**
+
+O **treinamento** é a fase inicial de construção da inteligência artificial. Trata-se do processo intensivo no qual o modelo analisa bilhões de dados de texto para aprender as estruturas da linguagem, os fatos sobre o mundo e a forma ideal de responder instruções.
+
+* **O que acontece tecnicamente:** Durante o treinamento, o sistema ajusta continuamente seus bilhões de parâmetros numéricos internos — chamados de **pesos do modelo (*model weights*)**.
+* **Etapas do Treinamento:** O treinamento ocorre em várias fases:
+  1. **Pré-treinamento:** O modelo aprende a prever a próxima palavra analisando volumes massivos de dados textuais.
+  2. **Pós-treinamento (SFT e RLHF):** O modelo é ensinado a agir como um assistente útil por meio do estudo de diálogos de exemplo (*Supervised Fine-Tuning*) e do recebimento de avaliações humanas (*Reinforcement Learning from Human Feedback*).
+  3. **Raciocínio via RL:** O modelo é treinado para "pensar passo a passo" antes de responder.
+
+---
+
+### **2. O que é a Inferência?**
+
+A **inferência** é o momento prático de uso do modelo já treinado. Ocorre sempre que um usuário faz uma pergunta ou envia uma instrução (prompt) para a IA por meio de uma aplicação ou interface de conversa.
+
+* **O que acontece tecnicamente:** Na inferência, **os pesos do modelo permanecem fixos e inalterados**. O sistema recebe o texto do usuário, calcula a probabilidade estatística de cada nova palavra e produz uma resposta de forma **autoregressiva** (gerando um token por vez).
+* **Execução em Fases:** Durante a inferência, o modelo passa pela fase de *prefill* (quando lê e processa todos os tokens do prompt enviado) e pela fase de *decode* (quando gera os novos tokens da resposta sequencialmente).
+* **Sem Memória Permanente (*Stateless*):** Cada chamada de inferência é isolada e "sem estado"; o modelo não altera seu treinamento básico ou sua estrutura com as perguntas que você faz.
+
+---
+
+### **Exemplo Prático para Comparação**
+
+Para facilitar a visualização, pense no modelo de linguagem como um **estudante de medicina**:
+
+* **O Treinamento é a Faculdade e a Residência Médica:** O estudante passa anos lendo livros acadêmicos (pré-treinamento), praticando o atendimento orientado por mentores experientes (SFT) e recebendo notas e correções sobre seus diagnósticos (RLHF). Durante esse longo processo, ele desenvolve e molda o seu conhecimento (ajuste dos *pesos do modelo*).
+* **A Inferência é a Consulta Médica com um Paciente:** Já formado, o médico atende um paciente no consultório. O paciente descreve seus sintomas (o *prompt* do usuário) e o médico usa o conhecimento que **já possui estocado na mente** para diagnosticar e receitar um tratamento (gerar a resposta). Dar essa resposta no consultório não faz o médico "recursar a faculdade do zero"; ele está apenas aplicando o conhecimento existente (fase de inferência).
+
+Pergunta 8
+
+Explique por que os LLMs trabalham com tokens em vez de simplesmente processarem palavras como seres humanos.
+
+Resposta: Os **Large Language Models (LLMs)** operam com **tokens** em vez de processarem palavras brutas diretamente devido à própria arquitetura das redes neurais, à necessidade de eficiência computacional e à estrutura das linguagens:
+
+* **Operação puramente numérica:** As redes neurais não leem letras ou compreendem palavras e significados como os seres humanos. O texto precisa ser processado por um *tokenizer*, que divide a entrada em **tokens** e atribui a cada um deles um **número de identificação (ID)** exclusivo pertencente a um vocabulário fixo. O modelo realiza todos os seus cálculos e previsões trabalhando **exclusivamente com esses números**, e só no final converte os IDs de volta em texto legível.
+* **Eficiência de vocabulário através de subpalavras:** Se o sistema dependesse de palavras inteiras, ele precisaria de um vocabulário gigantesco e quase infinito para catalogar todas as conjugações verbais, gírias, erros de digitação e termos técnicos. Ao utilizar **unidades de subpalavras**, o modelo consegue entender e formar palavras complexas ou desconhecidas juntando pedaços menores (como quebrar a palavra *"unbelievable"* em `"un"` + `"believ"` + `"able"`).
+* **Representação de pontuação, espaços e símbolos:** O idioma escrito inclui muito mais do que apenas palavras. Os tokens permitem mapear sinais de pontuação (como pontos e exclamações), espaços e símbolos de programação com os mesmos IDs numéricos do vocabulário, tratando toda a estrutura do texto de forma padronizada.
+* **Unificação para recursos multimodais:** A tokenização permite ao modelo trabalhar com diferentes tipos de dados. Imagens, áudios e outros formatos podem ser transformados por codificadores especializados em sequências de tokens, permitindo que o modelo processe conteúdos visuais ou sonoros junto com textos na mesma **janela de contexto**.
+* **Métrica padrão de limites e custos:** O uso de tokens fornece uma unidade de medida universal para calcular o limite de memória de trabalho de uma chamada (a **janela de contexto**), o poder de processamento computacional exigido e os custos de utilização das APIs.
+
+Pergunta 10 — Prompt melhorado
+
+Explique o que é um Large Language Model (LLM) para uma pessoa iniciante em programação. Utilize linguagem simples, apresente um exemplo prático, explique os termos técnicos e finalize com um resumo de cinco pontos.
+
+Resposta: Os **Large Language Models (LLMs)** operam com **tokens** em vez de processarem palavras brutas diretamente devido à própria arquitetura das redes neurais, à necessidade de eficiência computacional e à estrutura das linguagens:
+
+* **Operação puramente numérica:** As redes neurais não leem letras ou compreendem palavras e significados como os seres humanos. O texto precisa ser processado por um *tokenizer*, que divide a entrada em **tokens** e atribui a cada um deles um **número de identificação (ID)** exclusivo pertencente a um vocabulário fixo. O modelo realiza todos os seus cálculos e previsões trabalhando **exclusivamente com esses números**, e só no final converte os IDs de volta em texto legível.
+* **Eficiência de vocabulário através de subpalavras:** Se o sistema dependesse de palavras inteiras, ele precisaria de um vocabulário gigantesco e quase infinito para catalogar todas as conjugações verbais, gírias, erros de digitação e termos técnicos. Ao utilizar **unidades de subpalavras**, o modelo consegue entender e formar palavras complexas ou desconhecidas juntando pedaços menores (como quebrar a palavra *"unbelievable"* em `"un"` + `"believ"` + `"able"`).
+* **Representação de pontuação, espaços e símbolos:** O idioma escrito inclui muito mais do que apenas palavras. Os tokens permitem mapear sinais de pontuação (como pontos e exclamações), espaços e símbolos de programação com os mesmos IDs numéricos do vocabulário, tratando toda a estrutura do texto de forma padronizada.
+* **Unificação para recursos multimodais:** A tokenização permite ao modelo trabalhar com diferentes tipos de dados. Imagens, áudios e outros formatos podem ser transformados por codificadores especializados em sequências de tokens, permitindo que o modelo processe conteúdos visuais ou sonoros junto com textos na mesma **janela de contexto**.
+* **Métrica padrão de limites e custos:** O uso de tokens fornece uma unidade de medida universal para calcular o limite de memória de trabalho de uma chamada (a **janela de contexto**), o poder de processamento computacional exigido e os custos de utilização das APIs.
+
+Pergunta 11
+
+Quais são as principais limitações dos LLMs apresentadas nas fontes? Separe a resposta em limitações técnicas e limitações relacionadas à confiabilidade das informações.
+
+Resposta: ### **Limitações Técnicas e Estruturais**
+
+* **Ausência de memória persistente e janela de contexto finita:** Cada chamada à API do modelo é sem estado (*stateless*), o que significa que o LLM não guarda lembranças de conversas passadas, a menos que todo o histórico seja reenviado na mensagem. Além disso, o volume de informação processado é restrito a uma **janela de contexto limitada**, que funciona como um orçamento de memória no qual a instrução, o histórico e a resposta final precisam caber.
+* **Incapacidade inerente de executar ações:** Por padrão, os LLMs são apenas geradores de texto e não conseguem realizar tarefas de maneira autônoma no mundo digital, como enviar e-mails, fazer consultas em bancos de dados ou disparar APIs por conta própria.
+* **Comportamento não determinístico:** Mesmo quando configurados para uma temperatura igual a zero, os modelos não são totalmente determinísticos, podendo produzir respostas ligeiramente diferentes para um mesmo prompt devido a variações de infraestrutura, aritmética de ponto flutuante e agrupamento (*batching*).
+* **Dificuldade com cálculos exatos e lógica formal:** Embora o desempenho venha melhorando, os LLMs ainda cometem erros frequentes ao lidar com matemática precisa e problemas que exigem lógica formal.
+
+---
+
+### **Limitações Relacionadas à Confiabilidade das Informações**
+
+* **Alucinações (*Hallucinations*):** Os LLMs podem gerar respostas com tom confiante, mas que são **faticamente incorretas**. Em vez de buscarem fatos devidamente checados e verificados, esses sistemas funcionam "sonhando" textos e frases que soam plausíveis.
+* **Falta de conhecimento em tempo real:** A base de dados utilizada para treinar o modelo possui uma **data de corte** (*cutoff date*). Por esse motivo, o LLM não possui ciência de fatos, notícias ou acontecimentos ocorridos após a conclusão do seu treinamento.
+
+Pergunta 12
+
+Por que não devemos considerar automaticamente toda resposta de um modelo de linguagem como verdadeira? Utilize somente as fontes do notebook para responder.
+
+Resposta: Não devemos considerar automaticamente toda resposta de um modelo de linguagem (LLM) como verdadeira devido a limitações fundamentais em sua estrutura e funcionamento:
+
+* **Ocorrência de Alucinações (*Hallucinations*):** Os LLMs podem produzir respostas com tom altamente confiante, mas que são **faticamente incorretas**. Em vez de buscarem e recuperarem fatos devidamente verificados, os modelos geram ou "sonham" textos que apenas soarão plausíveis com base no contexto.
+* **Falta de Conhecimento em Tempo Real:** Toda a base de dados usada no treinamento de um modelo possui uma **data de corte** (*cutoff date*). Por esse motivo, o LLM não tem conhecimento sobre eventos, acontecimentos ou atualizações ocorridas após a conclusão do seu treinamento.
+* **Erros em Matemática e Lógica Formal:** Embora existam avanços, os modelos de linguagem ainda enfrentam dificuldades e cometem **erros em cálculos numéricos precisos** e em problemas que exigem lógica formal estrita.
+* **Comportamento Não Determinístico:** Uma mesma pergunta enviada ao modelo pode produzir respostas diferentes em chamadas distintas. Mesmo quando a temperatura do sistema é configurada em zero para buscar maior consistência, pequenas variações de infraestrutura, aritmética de ponto flutuante e processamento em lote podem alterar os resultados produzidos.
+* **Natureza Probabilística (Previsão de *Tokens*):** Na sua essência, o modelo é uma rede neural treinada para **prever estatisticamente qual é o próximo *token* numa sequência**. O sistema funciona calculando probabilidades com base em bilhões de parâmetros numéricos (pesos), e não consultando uma fonte de verdade absoluta ou validando se a informação é real.
+
+Pergunta 13
+
+Quais cuidados uma pessoa iniciante deve ter ao utilizar IA generativa para estudar, pesquisar ou tomar decisões?
+
+Resposta: Não devemos considerar automaticamente toda resposta de um modelo de linguagem (LLM) como verdadeira devido a limitações fundamentais em sua estrutura e funcionamento:
+
+* **Ocorrência de Alucinações (*Hallucinations*):** Os LLMs podem produzir respostas com tom altamente confiante, mas que são **faticamente incorretas**. Em vez de buscarem e recuperarem fatos devidamente verificados, os modelos geram ou "sonham" textos que apenas soarão plausíveis com base no contexto.
+* **Falta de Conhecimento em Tempo Real:** Toda a base de dados usada no treinamento de um modelo possui uma **data de corte** (*cutoff date*). Por esse motivo, o LLM não tem conhecimento sobre eventos, acontecimentos ou atualizações ocorridas após a conclusão do seu treinamento.
+* **Erros em Matemática e Lógica Formal:** Embora existam avanços, os modelos de linguagem ainda enfrentam dificuldades e cometem **erros em cálculos numéricos precisos** e em problemas que exigem lógica formal estrita.
+* **Comportamento Não Determinístico:** Uma mesma pergunta enviada ao modelo pode produzir respostas diferentes em chamadas distintas. Mesmo quando a temperatura do sistema é configurada em zero para buscar maior consistência, pequenas variações de infraestrutura, aritmética de ponto flutuante e processamento em lote podem alterar os resultados produzidos.
+* **Natureza Probabilística (Previsão de *Tokens*):** Na sua essência, o modelo é uma rede neural treinada para **prever estatisticamente qual é o próximo *token* numa sequência**. O sistema funciona calculando probabilidades com base em bilhões de parâmetros numéricos (pesos), e não consultando uma fonte de verdade absoluta ou validando se a informação é real.
+
