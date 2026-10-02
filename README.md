@@ -299,8 +299,6 @@ Como parte da etapa de estudo, foi criado no NotebookLM um **Resumo em Vídeo** 
 
 O vídeo produzido tem aproximadamente **9 minutos e 44 segundos** e aborda conceitos como previsão do próximo token, tokenização, janela de contexto, pré-treinamento, pós-treinamento, SFT, RLHF, limitações, temperatura e uso de ferramentas externas.
 
-O arquivo está disponível em `video/Como_funcionam_os_modelos_LLM_.mp4`.
-
 A análise do vídeo está em `video/analise-do-video.md`.
 
 ![Prévia do resumo em vídeo](video/preview-video.jpg)
